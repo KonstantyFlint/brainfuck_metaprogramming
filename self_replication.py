@@ -82,5 +82,3 @@ def print_tape():
 
 
 OPUS_MAGNUM = set_values(replicate_tape() + print_tape()) + replicate_tape() + print_tape()
-
-print(OPUS_MAGNUM)
