@@ -1,5 +1,5 @@
 PLUS_BYTE = ord("+")
-MINUS_BYTE = ord(">")
+RIGHT_BYTE = ord(">")
 
 LEFT = "<"
 RIGHT = ">"
@@ -46,7 +46,7 @@ def replicate_cell():
     result += ">"
     result += "[-<.<+>>]"
 
-    result += "<" + set_value(value=MINUS_BYTE, current_value=PLUS_BYTE, free_space=">") + "." + reset()
+    result += "<" + set_value(value=RIGHT_BYTE, current_value=PLUS_BYTE, free_space=">") + "." + reset()
 
     return result
 
@@ -63,7 +63,7 @@ def replicate_tape():
 
     # print >>>>
     result += ">"
-    result += set_value(MINUS_BYTE)
+    result += set_value(RIGHT_BYTE)
     result += "...."
     result += reset()
 
