@@ -59,10 +59,9 @@ def replicate_tape():
 
     result = ""
 
-    result += "<[<]<<<"
+    result += "<[<]<<"
 
     # print >>>>
-    result += ">"
     result += set_value(RIGHT_BYTE)
     result += "...."
     result += reset()
@@ -82,3 +81,7 @@ def print_tape():
 
 
 OPUS_MAGNUM = set_values(replicate_tape() + print_tape()) + replicate_tape() + print_tape()
+
+if __name__ == "__main__":
+    with open("opus_magnum.txt", "w", encoding="utf-8") as file:
+        file.write(OPUS_MAGNUM)

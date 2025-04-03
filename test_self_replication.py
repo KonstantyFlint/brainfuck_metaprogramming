@@ -11,3 +11,8 @@ def capture_output(code):
 
 def test_code_equal_to_output():
     assert OPUS_MAGNUM == capture_output(OPUS_MAGNUM)
+
+
+def test_file_up_to_date():
+    with open("opus_magnum.txt", encoding="utf-8") as file:
+        assert OPUS_MAGNUM == file.read()
